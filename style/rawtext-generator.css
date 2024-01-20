@@ -209,6 +209,16 @@ body::-webkit-scrollbar {
           border-radius: 5px;
           font-size: 15px;
           width: 100%;
+          transition: 0.3s;
+        }
+
+        #text:focus,
+        #selector:focus,
+        #name:focus,
+        #scoreboard:focus {
+          box-shadow:
+            0 0 1px 1px rgba(0, 100, 255, 0.3),
+            0 0 2px 2px rgba(0, 100, 255, 0.3);
         }
       }
     }
