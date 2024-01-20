@@ -131,6 +131,8 @@ behaviorMetadataName.addEventListener("input", ev => {
 
     behaviorResult.metadata.url = behaviorMetadataWebsite.value
   }
+
+  refresh()
 })
 
 behaviorMetadataWebsite.addEventListener("input", ev => {
@@ -146,6 +148,8 @@ behaviorMetadataWebsite.addEventListener("input", ev => {
 
     behaviorResult.metadata.url = behaviorMetadataWebsite.value
   }
+
+  refresh()
 })
 
 behaviorMetadataToggleButton.addEventListener("change", ev => {
@@ -385,6 +389,8 @@ resourceMetadataName.addEventListener("input", ev => {
 
     resourceResult.metadata.url = resourceMetadataWebsite.value
   }
+
+  refresh()
 })
 
 resourceMetadataWebsite.addEventListener("input", ev => {
@@ -400,6 +406,8 @@ resourceMetadataWebsite.addEventListener("input", ev => {
 
     resourceResult.metadata.url = resourceMetadataWebsite.value
   }
+
+  refresh()
 })
 
 resourceMetadataToggleButton.addEventListener("change", ev => {
