@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  margin-top: 50px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(200, 200, 200);
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 60%;
+  height: 90%;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .tools {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+
+    .pack-type {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      gap: 10px;
+
+      .pack-type-description {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      select {
+        padding: 8px;
+        font-size: 15px;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 30%;
+      }
+
+      select:focus {
+        box-shadow:
+          0 0 1px 1px rgba(0, 100, 255, 0.3),
+          0 0 2px 2px rgba(0, 100, 255, 0.3);
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: space-between;
+
+      .showcase {
+        width: 50%;
+        height: 100%;
+
+        textarea {
+          width: 100%;
+          height: 100%;
+          background-color: rgb(230, 230, 230);
+          border-radius: 5px;
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+          resize: none;
+          font-size: 15px;
+          letter-spacing: 1px;
+        }
+
+        .copy {
+          padding: 5px;
+          background-color: rgb(0, 255, 0);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          margin-top: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .copy:hover {
+          background-color: rgb(0, 200, 0);
+        }
+      }
+
+      .edit {
+        width: 50%;
+
+        .behavior-packs {
+          display: block;
+
+          .behavior-packs-name {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+
+            .pack-name-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            #pack-name {
+              width: 80%;
+              font-size: 15px;
+              padding: 5px;
+              border-radius: 5px;
+              padding-left: 10px;
+              border: 1px solid rgb(200, 200, 200);
+              transition: 0.3s;
+            }
+
+            #pack-name:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .behavior-packs-description {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .pack-description-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            #pack-description {
+              width: 80%;
+              font-size: 15px;
+              padding: 5px;
+              border-radius: 5px;
+              padding-left: 10px;
+              border: 1px solid rgb(200, 200, 200);
+            }
+
+            #pack-description:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .behavior-min-engine-version {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .pack-min-engine-version-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            select {
+              padding: 8px;
+              font-size: 15px;
+              border: 1px solid rgb(200, 200, 200);
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.3s;
+              width: 80%;
+            }
+
+            select:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .behavior-metadata {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .toggle {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+
+              .metadata-description {
+                font-size: 15px;
+                font-weight: 600;
+              }
+
+              input {
+                cursor: pointer;
+              }
+            }
+
+            .author-info {
+              display: none;
+
+              input {
+                width: 39%;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 5px;
+                padding-left: 10px;
+                border: 1px solid rgb(200, 200, 200);
+              }
+            }
+          }
+
+          .behavior-gametest {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .toggle {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+
+              .gametest-description {
+                font-size: 15px;
+                font-weight: 600;
+              }
+
+              input {
+                cursor: pointer;
+              }
+            }
+
+            .gametest {
+              width: 100%;
+              display: none;
+
+              #path {
+                width: 80%;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 5px;
+                padding-left: 10px;
+                border: 1px solid rgb(200, 200, 200);
+              }
+
+              .ui-container,
+              .net-container,
+              .admin-container,
+              .gametest-container {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-top: 10px;
+                gap: 10px;
+                font-size: 15px;
+                font-weight: 600;
+
+                input {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .resource-packs {
+          display: none;
+
+          .resource-packs-name {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+
+            .pack-name-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            #pack-name {
+              width: 80%;
+              font-size: 15px;
+              padding: 5px;
+              border-radius: 5px;
+              padding-left: 10px;
+              border: 1px solid rgb(200, 200, 200);
+              transition: 0.3s;
+            }
+
+            #pack-name:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .resource-packs-description {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .pack-description-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            #pack-description {
+              width: 80%;
+              font-size: 15px;
+              padding: 5px;
+              border-radius: 5px;
+              padding-left: 10px;
+              border: 1px solid rgb(200, 200, 200);
+            }
+
+            #pack-description:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .resource-min-engine-version {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .pack-min-engine-version-description {
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+            select {
+              padding: 8px;
+              font-size: 15px;
+              border: 1px solid rgb(200, 200, 200);
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.3s;
+              width: 80%;
+            }
+
+            select:focus {
+              box-shadow:
+                0 0 1px 1px rgba(0, 100, 255, 0.3),
+                0 0 2px 2px rgba(0, 100, 255, 0.3);
+            }
+          }
+
+          .resource-metadata {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            .toggle {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+
+              .metadata-description {
+                font-size: 15px;
+                font-weight: 600;
+              }
+
+              input {
+                cursor: pointer;
+              }
+            }
+
+            .author-info {
+              display: none;
+
+              input {
+                width: 39%;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 5px;
+                padding-left: 10px;
+                border: 1px solid rgb(200, 200, 200);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    width: 80%;
+
+    .tools {
+      .pack-type {
+        select {
+          width: 100%;
+        }
+      }
+
+      .bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .edit {
+          width: 100%;
+
+          .behavior-packs {
+
+            .behavior-packs-name,
+            .behavior-packs-description,
+            .behavior-min-engine-version,
+            .behavior-metadata,
+            .behavior-gametest {
+              width: 100%;
+
+              #pack-name,
+              #pack-description,
+              #min-engine-version {
+                width: 100%;
+              }
+
+              .author-info {
+                width: 100%;
+
+                #name,
+                #website {
+                  width: 100%;
+                }
+              }
+
+              .gametest {
+                #path {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        .showcase {
+          width: 100%;
+          height: 500px;
+        }
+      }
+    }
+  }
+}

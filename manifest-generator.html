@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Tools for Minecraft Bedrock Edition</title>
+  <link rel="stylesheet" href="./style/manifest-generator.css">
+  <link rel="shortcut icon" href="./picture/title.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="./style/fonts.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Creator Tools for Minecraft Bedrock Edition</h1>
+    <div class="tools">
+      <div class="pack-type">
+        <div class="pack-type-description">Pack type</div>
+        <select id="pack-type">
+          <option value="behavior-pack">Behavior pack</option>
+          <option value="resource-pack">Resource pack</option>
+        </select>
+      </div>
+      <div class="line"></div>
+      <div class="bottom">
+        <div class="edit">
+          <div class="behavior-packs">
+            <div class="behavior-packs-name">
+              <div class="pack-name-description">Pack name</div>
+              <input type="text" id="pack-name" placeholder="Name">
+            </div>
+            <div class="behavior-packs-description">
+              <div class="pack-description-description">Pack description</div>
+              <input type="text" id="pack-description" placeholder="Description">
+            </div>
+            <div class="behavior-min-engine-version">
+              <div class="pack-min-engine-version-description">Min engine version</div>
+              <select id="min-engine-version">
+                <option value="1.20.0">1.20.0</option>
+                <option value="1.19.0">1.19.0</option>
+                <option value="1.18.0">1.18.0</option>
+                <option value="1.17.0">1.17.0</option>
+                <option value="1.16.0">1.16.0</option>
+                <option value="1.15.0">1.15.0</option>
+                <option value="1.14.0">1.14.0</option>
+                <option value="1.13.0">1.13.0</option>
+              </select>
+            </div>
+            <div class="behavior-metadata">
+              <div class="toggle">
+                <div class="metadata-description">Enable metadata</div>
+                <input type="checkbox" id="enable-metadata">
+              </div>
+              <div class="author-info">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="website" placeholder="Website">
+              </div>
+            </div>
+            <div class="behavior-gametest">
+              <div class="toggle">
+                <div class="gametest-description">Enable GameTest</div>
+                <input type="checkbox" id="enable-gametest">
+              </div>
+              <div class="gametest">
+                <input type="text" id="path" placeholder="Entry file" value="./module/main.js">
+                <div class="ui-container">
+                  <div class="ui-description">Enable UI</div>
+                  <input type="checkbox" id="enable-ui">
+                </div>
+                <div class="net-container">
+                  <div class="net-description">Enable Net</div>
+                  <input type="checkbox" id="enable-net">
+                </div>
+                <div class="admin-container">
+                  <div class="admin-description">Enable Admin</div>
+                  <input type="checkbox" id="enable-admin">
+                </div>
+                <div class="gametest-container">
+                  <div class="gametest-description">Enable GameTest</div>
+                  <input type="checkbox" id="enable-gametest">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resource-packs">
+            <div class="resource-packs-name">
+              <div class="pack-name-description">Pack name</div>
+              <input type="text" id="pack-name" placeholder="Name">
+            </div>
+            <div class="resource-packs-description">
+              <div class="pack-description-description">Pack description</div>
+              <input type="text" id="pack-description" placeholder="Description">
+            </div>
+            <div class="resource-min-engine-version">
+              <div class="pack-min-engine-version-description">Min engine version</div>
+              <select id="min-engine-version">
+                <option value="1.20.0">1.20.0</option>
+                <option value="1.19.0">1.19.0</option>
+                <option value="1.18.0">1.18.0</option>
+                <option value="1.17.0">1.17.0</option>
+                <option value="1.16.0">1.16.0</option>
+                <option value="1.15.0">1.15.0</option>
+                <option value="1.14.0">1.14.0</option>
+                <option value="1.13.0">1.13.0</option>
+              </select>
+            </div>
+            <div class="resource-metadata">
+              <div class="toggle">
+                <div class="metadata-description">Enable metadata</div>
+                <input type="checkbox" id="enable-metadata">
+              </div>
+              <div class="author-info">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="website" placeholder="Website">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase">
+          <textarea id="showcase" readonly></textarea>
+          <div class="copy">Copy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/manifest-generator.mjs"></script>
+</body>
+
+</html>
