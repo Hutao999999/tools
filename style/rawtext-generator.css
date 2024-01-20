@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  padding-top: 50px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(200, 200, 200);
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 60%;
+  height: 90%;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .tools {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .showcase {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+
+      .showcase-description {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      #showcase {
+        background-color: rgb(200, 200, 200);
+        width: 100%;
+        resize: none;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        height: 150px;
+        overflow: scroll;
+
+        .bold {
+          font-weight: 600;
+        }
+
+        .italics {
+          font-style: italic;
+        }
+      }
+    }
+
+    .command {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+
+      .command-description {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      #command {
+        background-color: rgb(200, 200, 200);
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+      }
+    }
+
+    .run {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+      background-color: rgb(200, 200, 200);
+      margin-top: 20px;
+      border-radius: 5px;
+      padding: 20px;
+
+      .clear-all,
+      .undo,
+      .copy {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .clear-all,
+      .copy {
+        background-color: rgb(0, 255, 0);
+      }
+
+      .undo {
+        background-color: rgb(0, 200, 0);
+      }
+
+      .clear-all:hover,
+      .copy:hover {
+        background-color: rgb(0, 200, 0);
+      }
+
+      .undo:hover {
+        background-color: rgb(0, 150, 0);
+      }
+    }
+
+    .edit {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+      height: 40%;
+
+      #add {
+        width: 100%;
+        background-color: rgb(0, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      #add:hover {
+        background-color: rgb(0, 200, 0);
+      }
+
+      .text,
+      .selector,
+      .score {
+        padding: 10px;
+        background-color: rgb(200, 200, 200);
+        border-radius: 5px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+
+        .text-description,
+        .selector-description,
+        .name-description,
+        .scoreboard-description {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        #text,
+        #selector,
+        #name,
+        #scoreboard {
+          padding: 5px;
+          padding-left: 10px;
+          border-radius: 5px;
+          font-size: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow: auto;
+    height: calc(100% + 100px);
+  }
+
+  .container {
+    width: 80%;
+
+    .tools {
+      .edit {
+        flex-direction: column;
+      }
+    }
+  }
+}
