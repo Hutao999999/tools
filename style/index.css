@@ -39,7 +39,7 @@ body {
     border-radius: 5px;
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 
     .manifest-generator {
@@ -62,8 +62,22 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgb(200, 150, 0);
+      background-color: rgb(255, 150, 0);
       color: white;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .give-generator {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 255, 0);
       font-size: 20px;
       padding: 10px;
       border-radius: 5px;
@@ -77,7 +91,19 @@ body {
     }
 
     .rawtext-generator:hover {
-      background-color: rgb(150, 100, 0);
+      background-color: rgb(200, 100, 0);
+    }
+
+    .give-generator:hover {
+      background-color: rgb(200, 200, 0);
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  .container {
+    .buttons {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

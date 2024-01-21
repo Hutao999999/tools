@@ -119,6 +119,7 @@ body::-webkit-scrollbar {
           margin-top: 20px;
           cursor: pointer;
           transition: 0.3s;
+          font-weight: 600;
         }
 
         .copy:hover {

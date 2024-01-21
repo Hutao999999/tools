@@ -134,24 +134,19 @@ body::-webkit-scrollbar {
         border-radius: 5px;
         font-size: 15px;
         transition: 0.3s;
+        font-weight: 600;
       }
 
       .clear-all,
+      .undo,
       .copy {
         background-color: rgb(0, 255, 0);
       }
 
-      .undo {
-        background-color: rgb(0, 200, 0);
-      }
-
       .clear-all:hover,
-      .copy:hover {
-        background-color: rgb(0, 200, 0);
-      }
-
+      .copy:hover,
       .undo:hover {
-        background-color: rgb(0, 150, 0);
+        background-color: rgb(0, 200, 0);
       }
     }
 
@@ -173,6 +168,8 @@ body::-webkit-scrollbar {
         border-radius: 5px;
         transition: 0.3s;
         cursor: pointer;
+        font-weight: 600;
+        padding: 5px;
       }
 
       #add:hover {

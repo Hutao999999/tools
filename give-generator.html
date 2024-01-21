@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawtext Generator Tools for Minecraft Bedrock Edition</title>
+  <link rel="stylesheet" href="./style/give-generator.css">
+  <link rel="shortcut icon" href="./picture/title.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="./style/fonts.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Creator Tools for Minecraft Bedrock Edition</h1>
+    <div class="tools">
+      <div class="command">
+        <div class="command-description">Command</div>
+        <input type="text" id="command" readonly>
+      </div>
+      <div class="edit">
+        <div class="keyin">
+          <div class="can-place-on">
+            <div class="can-place-on-description">Can Place On</div>
+            <input type="text" id="can-place-on" placeholder="Blocks">
+            <div id="add">Add</div>
+          </div>
+          <div class="can-destroy">
+            <div class="can-destroy-description">Can Destroy</div>
+            <input type="text" id="can-destroy" placeholder="Blocks">
+            <div id="add">Add</div>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="keep-on-death">
+            <div class="keep-on-death-description">Keep on Death</div>
+            <input type="checkbox" id="keep-on-death">
+          </div>
+          <div class="lock-mode">
+            <div class="lock-mode-description">Lock Mode</div>
+            <select id="lock-mode">
+              <option value="none">None</option>
+              <option value="inventory">Lock in Inventory</option>
+              <option value="slot">Lock in Slot</option>
+            </select>
+          </div>
+        </div>
+        <div class="run">
+          <div class="clear-all">Clear All</div>
+          <div class="undo">Undo</div>
+          <div class="copy">Copy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/give-generator.mjs"></script>
+</body>
+
+</html>
